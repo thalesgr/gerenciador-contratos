@@ -59,7 +59,7 @@ venv\Scripts\activate     # Windows
 bash start.sh
 ```
 
-O projeto já deve abrir a página contendo o conteúdo do projeto.
+O projeto já deve abrir a página contendo o conteúdo do projeto. Caso os dados iniciais não estejam aparecendo, o frontend subiu mais rapido que o backend, apenas atualize a página.
 
 ## Testes
 
