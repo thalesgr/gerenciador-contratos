@@ -61,6 +61,11 @@ bash start.sh
 
 O projeto já deve abrir a página contendo o conteúdo do projeto. Caso os dados iniciais não estejam aparecendo, o frontend subiu mais rapido que o backend, apenas atualize a página.
 
+### Parar execução
+```bash
+CTRL + C
+```
+
 ## Testes
 
 Para rodar os testes da aplicação é apenas necessário um comando: 
