@@ -22,7 +22,6 @@ venv/
 
 # Arquivos de log e teste
 *.log
-/pytest.ini
 
 # Arquivos de sistema/SO
 .DS_Store
