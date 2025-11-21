@@ -1,0 +1,29 @@
+# Diretórios de build/cache
+.pytest_cache/
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Backend (Python/Flask)
+/backend/instance/
+/backend/data/
+/backend/venv
+.venv
+venv/
+
+# Frontend (Node/React)
+/frontend/node_modules/
+/frontend/build
+
+# Arquivos de ambiente e variáveis de configuração
+.env
+.flaskenv
+
+# Arquivos de log e teste
+*.log
+/pytest.ini
+
+# Arquivos de sistema/SO
+.DS_Store
+Thumbs.db
