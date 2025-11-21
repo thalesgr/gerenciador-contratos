@@ -34,4 +34,5 @@ def create_app(testing=False):
 
 if __name__ == "__main__":
     app = create_app()
-    app.run(host="0.0.0.0", port=5000)
+    port = int(os.environ.get("PORT", 5000))  # pega a porta do Cloud Run, default 5000 localmente
+    app.run(host="0.0.0.0", port=port)

@@ -1,7 +1,13 @@
 import axios from 'axios';
 
+const BASE_URL =
+  window.location.hostname === 'localhost'
+    ? 'http://localhost:5000'
+    : 'https://flask-contracts-36130776084.us-central1.run.app';
+
+
 export const getContracts = async (filters = {}) => {
-    const url = 'http://localhost:5000/contracts';
+    const url =  `${BASE_URL}/contracts`
 
     const params = new URLSearchParams();
 
@@ -23,7 +29,7 @@ export const getContracts = async (filters = {}) => {
 }
 
 export const getContractById = async (id) => {
-    const url = `http://localhost:5000/contracts/${id}`;
+    const url = `${BASE_URL}/contracts/${id}`;
     try {
         const response = await axios.get(url);
         return response.data;
@@ -34,7 +40,7 @@ export const getContractById = async (id) => {
 }
 
 export const saveContract = async (contract) => {
-    const url = contract.id ? `http://localhost:5000/contracts/${contract.id}` : 'http://localhost:5000/contracts';
+    const url = contract.id ? `${BASE_URL}/contracts/${contract.id}` : `${BASE_URL}/contracts`;
     try {
         if (contract.id) {
             // Update existing contract
@@ -52,7 +58,7 @@ export const saveContract = async (contract) => {
 }
 
 export const deleteContract = async (id) => {
-    const url = `http://localhost:5000/contracts/${id}`;
+    const url = `${BASE_URL}/contracts/${id}`;
     try {
         await axios.delete(url);
     } catch (error) {
